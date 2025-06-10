@@ -1,17 +1,36 @@
 {
-  "name": "Ticket Analytics Dashboard",
+  "name": "Dashboard de Tickets",
   "author": {
-    "name": "Your Name",
-    "email": "your.email@example.com",
-    "url": "https://example.com"
+    "name": "Tu Nombre",
+    "email": "tu-email@empresa.com"
   },
-  "defaultLocale": "en",
+  "defaultLocale": "es",
   "private": true,
   "location": {
     "support": {
-      "ticket_sidebar": "assets/iframe.html"
+      "ticket_sidebar": {
+        "url": "iframe.html",
+        "flexible": true,
+        "size": {
+          "width": "100%",
+          "height": "600px"
+        }
+      }
     }
   },
-  "version": "1.0",
-  "frameworkVersion": "2.0"
-} 
+  "version": "1.0.0",
+  "frameworkVersion": "2.0",
+  "parameters": [
+    {
+      "name": "api_token",
+      "type": "text",
+      "required": false,
+      "default": ""
+    }
+  ],
+  "domainWhitelist": [
+    "*.zendesk.com",
+    "cdn.jsdelivr.net",
+    "cdnjs.cloudflare.com"
+  ]
+}
